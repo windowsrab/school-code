@@ -1,3 +1,21 @@
+/*
+Palette colors
+DarkBlue    #194977
+Blue        #2697d9
+LightBlue   #33c6f2
+DarkYellow  #ffe135
+LightYellow #fefd1b
+White       #ffffff
+DarkGreen   #109755
+LightGreen  #15ffaa
+*/
+:root {
+    --color-primary: #194977;
+    --color-secondary: #fefd1b;
+    --color-accent: #109755;
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+}
 body {
     font-size: 16px;
     padding: 0px;
@@ -14,63 +32,87 @@ body {
         "links links";
     overflow: hidden;
     height: 100vh;
-    background: #000000;
+    background: var(--color-primary);
+    color: var(--color-text-light);
     margin: 0px;
 }
 .photo-block {
-    display: flex;
     grid-area: photo;
-    justify-content: flex-end;
+    display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 16px;
-    background: #174eb455;
 }
 .photo-image {
-    position: relative;
-    box-sizing: border-box;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: #5b17b455;
-    background-image: url(https://avatars1.githubusercontent.com/u/7059877?s=460&v=4);
+    background-image: url(https://i.pinimg.com/736x/04/68/31/04683107079186070875eeb2ba802016.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .name-block {
-    position: relative;
     grid-area: name;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-start;
     padding: 16px;
-    font-size: 250%;
-    background: #215bb355;
-    color: #ffffff;
+    font-size: 300%;
+    color: var(--color-secondary);
 }
 .about-me-block {
     position: relative;
     grid-area: about;
     display: flex;
     align-items: flex-start;
+    justify-content: flex-start;
     padding: 16px;
     font-size: 120%;
-    background: #3664bb55;
-    color: #eeeeee;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.about-me-block>p {
+    max-width: 400px;
+    padding: 0px;
+    margin: 0px;
 }
 .links-block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     grid-area: links;
-    padding: 16px;
-    background: #197ca355;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--color-secondary);
 }
-.anchor-link {
-    display: inline-block;
-    color: #ffffff;
-    background: #00000055;
-    padding: 8px 16px;
+.links-block>a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
     margin: 16px;
+    color: #194977;
+    background: var(--color-secondary);
+}
+
+.links-block>a.link-vk {
+    background: 
+        url(https://brand.vkforms.ru/static/media/logo_color_198.231228dd.svg) 
+        no-repeat 50% / contain;
+}
+.links-block>a.link-facebook {
+    background: 
+        url(https://en.facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png)
+        no-repeat 50% / contain;
+}
+.links-block>a.link-instagram {
+    background: url(https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=64) 
+    no-repeat 50% / contain;
+}
+.links-block>a.link-twitter {
+    background: url(https://cdn3.iconfinder.com/data/icons/capsocial-round/500/twitter-64.png) 
+    no-repeat 50% / contain;
 }
 
 .long-info {
@@ -81,8 +123,8 @@ body {
     overflow: hidden;
     height: 100vh;
     margin: 0px;
-    background: yellow;
-    color: #214594;
+    background: var(--color-accent);
+    color: var(--color-text-light);
 }
 
 
