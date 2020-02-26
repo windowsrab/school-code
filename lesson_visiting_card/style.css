@@ -14,7 +14,7 @@ LightGreen  #15ffaa
     --color-secondary: #fefd1b;
     --color-accent: #109755;
     --color-text-dark: #333333;
-    --color-text-light: #ffffff;
+    --color-text-light: #411c7e;
 }
 body {
     font-size: 16px;
@@ -115,7 +115,7 @@ body {
     no-repeat 50% / contain;
 }
 
-.long-info {
+.long-info1 {
     display: flex;
     position: relative;
     justify-content: center;
@@ -126,6 +126,7 @@ body {
     background: var(--color-accent);
     color: var(--color-text-light);
 }
+
 
 
 @media (max-width: 480px) {
@@ -162,3 +163,5 @@ body {
         margin: 8px;
     }
 }
+
+
