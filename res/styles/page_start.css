@@ -1,0 +1,224 @@
+
+/*
+Palette colors
+DarkBlue    #194977
+Blue        #2697d9
+LightBlue   #33c6f2
+DarkYellow  #ffe135
+LightYellow #fefd1b
+White       #ffffff
+DarkGreen   #109755
+LightGreen  #15ffaa
+*/
+:root {
+    --color-primary: rgb(250, 191, 114);
+    --color-secondary: #EC7F17;
+    --color-accent: #FC7753;
+    --color-text-dark: #f35454;
+    --color-text-light: #F0F0C9;
+}
+
+.short-info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.62fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas:
+        "photo name"
+        "photo about"
+        "links links";
+    overflow: hidden;
+    height: 100vh;
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    margin: 0px;
+}
+.photo-block {
+    grid-area: photo;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px;
+}
+.photo-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(https://img1.freepng.ru/20180510/skw/kisspng-tweety-sylvester-cartoon-clip-art-5af4f46e546104.7898729915260027983456.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.name-block {
+    grid-area: name;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 16px;
+    font-size: 300%;
+    color: var(--color-secondary);
+}
+.about-me-block {
+    position: relative;
+    grid-area: about;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 220px;
+    font-size: 130%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.about-me-block>p {
+    max-width: 800px;
+    padding: 5px;
+    margin: 5px;
+    
+}
+.links-block {
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--color-secondary);
+}
+.links-block>a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    margin: 16px;
+    color: #194977;
+    background: var(--color-secondary);
+}
+
+.links-block>a.link-vk {
+    background: 
+        url(https://brand.vkforms.ru/static/media/logo_color_198.231228dd.svg) 
+        no-repeat 50% / contain;
+}
+.links-block>a.link-facebook {
+    background: 
+        url(https://en.facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png)
+        no-repeat 50% / contain;
+}
+.links-block>a.link-instagram {
+    background: url(https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=64) 
+    no-repeat 50% / contain;
+}
+.links-block>a.link-twitter {
+    background: url(https://cdn3.iconfinder.com/data/icons/capsocial-round/500/twitter-64.png) 
+    no-repeat 50% / contain;
+}
+
+.long-info {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0px;
+    background: var(--color-accent);
+    color: var(--color-text-light);
+}
+@media (max-width: 650px){
+    .short-info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "photo "
+        "name"
+        "about"
+        "links";
+    overflow: hidden;
+    height: 100vh;
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    margin: 0px;
+}
+.photo-block {
+    grid-area: photo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+}
+.name-block {
+    grid-area: name;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 16px;
+    font-size: 300%;
+    color: var(--color-secondary);
+}
+.links-block>a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    margin: 16px;
+    color: #194977;
+    background: var(--color-secondary);
+}
+#page2 {
+    background: var  ;
+}
+
+
+}
+ 
+@media (max-width: 320px) {
+    .short-info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "photo "
+        "name"
+        "about"
+        "links";
+    overflow: hidden;
+    height: 100vh;
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    margin: 0px;
+}
+.photo-block {
+    grid-area: photo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+}
+.name-block {
+    grid-area: name;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 16px;
+    font-size: 300%;
+    color: var(--color-secondary);
+}
+.links-block>a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    margin: 16px;
+    color: #194977;
+    background: var(--color-secondary);
+}
+
+
+}
